@@ -18,6 +18,7 @@ To test multiple models by distributing traffic between them, specify the percen
 
 ![](./images/production-variants.gif)
 
+<a id = "Notebook-overview"></a>
 ## Notebook overview
 
 You will use a Jupyter notebook in Amazon SageMaker to create an endpoint that hosts two models (using `ProductionVariant`). Both models were trained using the Amazon SageMaker [built-in XGBoost algorithm](https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html) on a dataset for predicting mobile operator customer churn. For more information about how the models were trained, see [Customer Churn Prediction with XGBoost](https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_applying_machine_learning/xgboost_customer_churn/xgboost_customer_churn.ipynb). In the following use case, we trained each model on different subsets of the same dataset and used different versions of the XGBoost algorithm for each model.
@@ -26,10 +27,10 @@ Try these activities yourself by using the [sample A/B Testing with Amazon SageM
 
 The walkthrough includes the following steps:
 
-* [Creating and deploying the models](#Step-1:-Create-and-deploy-the-models)
-* [Invoking the deployed models](#Step-2:-Invoke-the-deployed-models)
-* [Evaluating variant performance](#Step-3:-Evaluate-variant-performance)
-* [Dialing up inference traffic to your chosen variant in production](#Step-4:-Dialing-up-our-chosen-variant-in-production)
+* [Creating and deploying the models](#Step-1)
+* [Invoking the deployed models](#Step-2)
+* [Evaluating variant performance](#Step-3)
+* [Dialing up inference traffic to your chosen variant in production](#Step-4)
 
 ### Configuration
 
@@ -71,6 +72,8 @@ Additionally, you will need to add the `GetMetricStatistics` action to your `Ama
 
 ![](images/iam-role-screenshot.png)
 
+[Back to TOC](#Notebook-overview)
+<a id = "Step-1" ></a>
 ### Step 1: Create and deploy the models
 
 #### First, we upload our pre-trained models to Amazon S3
@@ -195,7 +198,8 @@ sm_session.endpoint_from_production_variants(
     'DEMO-xgb-churn-pred-2022-08-29-18-52-10'
 
 
-
+[Back to TOC](#Notebook-overview)
+<a id = "Step-2" ></a>
 ### Step 2: Invoke the deployed models
 
 You can now send data to this endpoint to get inferences in real time.
@@ -336,7 +340,8 @@ plot_endpoint_metrics()
 ![png](images/output_19_1.png)
     
 
-
+[Back to TOC](#Notebook-overview)
+<a id = "Step-3" ></a>
 ### Step 3: Evaluate variant performance
 
 #### Evaluating Variant 1
@@ -498,6 +503,8 @@ plt.show()
 ![png](images/output_27_1.png)
     
 
+[Back to TOC](#Notebook-overview)
+<a id = "Step-4" ></a>
 
 We see that `Variant2` is performing better for most of our defined metrics, so this is the one we’re likely to choose to dial up in production.
 
