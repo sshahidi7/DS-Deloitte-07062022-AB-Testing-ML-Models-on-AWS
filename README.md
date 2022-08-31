@@ -1,5 +1,7 @@
 # A/B Testing ML Models in Production
 
+[##### Source](https://aws.amazon.com/blogs/machine-learning/a-b-testing-ml-models-in-production-using-amazon-sagemaker/)
+
 [Amazon SageMaker](https://aws.amazon.com/sagemaker/) is a fully managed service that provides developers and data scientists the ability to quickly build, train, and deploy machine learning (ML) models. Tens of thousands of customers, including Intuit, Voodoo, ADP, Cerner, Dow Jones, and Thomson Reuters, use Amazon SageMaker to remove the heavy lifting from the ML process. With Amazon SageMaker, you can deploy your ML models on hosted endpoints and get inference results in real time. You can easily view the performance metrics for your endpoints in [Amazon CloudWatch](http://aws.amazon.com/cloudwatch), enable [autoscaling](https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html) to automatically scale endpoints based on traffic, and update your models in production without losing any availability.
 
 In many cases, such as e-commerce applications, offline model evaluation isn’t sufficient, and you need to A/B test models in production before making the decision of updating models. With Amazon SageMaker, you can easily perform A/B testing on ML models by running multiple production variants on an endpoint. You can use production variants to test ML models that have been trained using different training datasets, algorithms, and ML frameworks; test how they perform on different instance types; or a combination of all of the above.
@@ -64,6 +66,10 @@ prefix = "sagemaker/DEMO-VariantTargeting"
     CPU times: user 2.28 s, sys: 292 ms, total: 2.57 s
     Wall time: 43.9 s
 
+
+Additionally, you will need to add the `GetMetricStatistics` action to your `AmazonSageMakerServiceCatalogProductsUseRole`, found under `Roles` in the Access Management submenu in the navigation menu of the IAM user interface, as shown below (click the Edit button and add the action manually, then save):
+
+![](images/iam-role-screenshot.png)
 
 ### Step 1: Create and deploy the models
 
