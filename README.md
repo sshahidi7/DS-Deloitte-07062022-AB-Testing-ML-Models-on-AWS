@@ -34,7 +34,11 @@ The walkthrough includes the following steps:
 
 ### Configuration
 
-Let’s set up some required imports and basic initial variables:
+You will need to add the `GetMetricStatistics` action to your `AmazonSageMakerServiceCatalogProductsUseRole`, found under `Roles` in the Access Management submenu in the navigation menu of the IAM user interface, as shown below (click the Edit button and add the action manually, then save):
+
+![](images/iam-role-screenshot.png)
+
+Having completed that step, you can now set up the required imports and basic initial variables:
 
 
 ```python
@@ -68,9 +72,6 @@ prefix = "sagemaker/DEMO-VariantTargeting"
     Wall time: 43.9 s
 
 
-Additionally, you will need to add the `GetMetricStatistics` action to your `AmazonSageMakerServiceCatalogProductsUseRole`, found under `Roles` in the Access Management submenu in the navigation menu of the IAM user interface, as shown below (click the Edit button and add the action manually, then save):
-
-![](images/iam-role-screenshot.png)
 
 [Back to TOC](#Notebook-overview)
 <a id = "Step-1" ></a>
