@@ -10,6 +10,8 @@ In many cases, such as e-commerce applications, offline model evaluation isn’t
 
 In production ML workflows, data scientists and engineers frequently try to improve their models in various ways, such as by performing [automated hyperparameter tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html), training on additional or more recent data, or improving feature selection. Performing A/B testing on the new model and the old model with production traffic can be an effective final step in the validation process for a new model. In A/B testing, you test different variants of your models and compare how each variant performs relative to each other. If the new version delivers performance that is better or equal to the previously existing version, you replace the older model.
 
+![](images/aws-model-inference-options-2.png)
+
 Amazon SageMaker enables you to test multiple models or model versions behind the same endpoint using production variants. Each `ProductionVariant` identifies an ML model and the resources deployed for hosting the model. You can distribute endpoint invocation requests across multiple production variants by providing the traffic distribution for each variant or invoking a variant directly for each request. In the following sections, we look at both methods for testing ML models.
 
 ### Testing models by distributing traffic to variants
