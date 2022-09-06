@@ -10,7 +10,7 @@ In many cases, such as e-commerce applications, offline model evaluation isn’t
 
 In production ML workflows, data scientists and engineers frequently try to improve their models in various ways, such as by performing [automated hyperparameter tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html), training on additional or more recent data, or improving feature selection. Performing A/B testing on the new model and the old model with production traffic can be an effective final step in the validation process for a new model. In A/B testing, you test different variants of your models and compare how each variant performs relative to each other. If the new version delivers performance that is better or equal to the previously existing version, you replace the older model.
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/aws-model-inference-options-2.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/aws-model-inference-options-2.png' width="750">
 
 Amazon SageMaker enables you to test multiple models or model versions behind the same endpoint using production variants. Each `ProductionVariant` identifies an ML model and the resources deployed for hosting the model. You can distribute endpoint invocation requests across multiple production variants by providing the traffic distribution for each variant or invoking a variant directly for each request. In the following sections, we look at both methods for testing ML models.
 
@@ -18,7 +18,7 @@ Amazon SageMaker enables you to test multiple models or model versions behind th
 
 To test multiple models by distributing traffic between them, specify the percentage of the traffic to route to each model by specifying the weight for each production variant in the [endpoint configuration](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html). Amazon SageMaker distributes the traffic between production variants based on the respective weights that you provided. This is the default behavior when using production variants. The following diagram shows how this works in more detail. Each inference response also contains the name of the variant that processed the request.
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/production-variants.gif' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/production-variants.gif' width="750">
 
 <a id = "Notebook-overview"></a>
 ## Notebook overview
@@ -38,7 +38,7 @@ The walkthrough includes the following steps:
 
 You will need to add the `GetMetricStatistics` action to your `AmazonSageMakerServiceCatalogProductsUseRole`, found under `Roles` in the Access Management submenu in the navigation menu of the IAM user interface, as shown below (click the Edit button and add the action manually, then save):
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/iam-role-screenshot.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/iam-role-screenshot.png' width="750">
 
 Having completed that step, you can now set up the required imports and basic initial variables:
 
@@ -338,7 +338,7 @@ time.sleep(20)  # let metrics catch up
 plot_endpoint_metrics()
 ```
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/output_19_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_19_1.png' width="750">
 
     
 
@@ -405,7 +405,7 @@ plt.show()
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/output_21_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_21_1.png' width="750">
     
 
 
@@ -451,7 +451,7 @@ time.sleep(60)  # give metrics time to catch up
 plot_endpoint_metrics()
 ```
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/output_25_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_25_1.png' width="750">
     
 
 
@@ -499,7 +499,7 @@ plt.show()
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/output_27_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_27_1.png' width="750">
     
 
 [Back to TOC](#Notebook-overview)
@@ -633,7 +633,7 @@ plot_endpoint_metrics(invocation_start_time)
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/output_38_2.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_38_2.png' width="750">
     
 
 
@@ -685,7 +685,7 @@ plot_endpoint_metrics(invocation_start_time)
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/master/images/output_41_2.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_41_2.png' width="750">
     
 
 
