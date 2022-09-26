@@ -25,8 +25,6 @@ To test multiple models by distributing traffic between them, specify the percen
 
 You will use a Jupyter notebook in Amazon SageMaker to create an endpoint that hosts two models (using `ProductionVariant`). Both models were trained using the Amazon SageMaker [built-in XGBoost algorithm](https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html) on a dataset for predicting mobile operator customer churn. For more information about how the models were trained, see [Customer Churn Prediction with XGBoost](https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_applying_machine_learning/xgboost_customer_churn/xgboost_customer_churn.ipynb). In the following use case, we trained each model on different subsets of the same dataset and used different versions of the XGBoost algorithm for each model.
 
-Try these activities yourself by using the [sample A/B Testing with Amazon SageMaker’ Jupyter Notebook](https://github.com/aws/amazon-sagemaker-examples/tree/main/sagemaker_endpoints/a_b_testing). You can run it either in [Amazon SageMaker Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/gs-studio.html) or in an Amazon SageMaker notebook instance. The dataset we use is publicly available and mentioned in the book Discovering Knowledge in Data by Daniel T. Larose. It is attributed by the author to the University of California Irvine Repository of Machine Learning Datasets.
-
 The walkthrough includes the following steps:
 
 * [Creating and deploying the models](#Step-1)
@@ -81,7 +79,7 @@ prefix = "sagemaker/DEMO-VariantTargeting"
 
 #### First, we upload our pre-trained models to Amazon S3
 
-This code uploads two pre-trained XGBoost models that are ready for you to deploy. These models were trained using the XGB Churn Prediction Notebook in SageMaker. You can also use your own pre-trained models in this step. If you already have a pretrained model in Amazon S3, you can add it by specifying the s3_key.
+This code uploads two pre-trained XGBoost models that are ready for you to deploy. You can also use your own pre-trained models in this step. If you already have a pretrained model in Amazon S3, you can add it by specifying the s3_key.
 
 The models in this example are used to predict the probability of a mobile customer leaving their current mobile operator.
 
