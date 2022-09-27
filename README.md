@@ -286,7 +286,7 @@ plot_endpoint_metrics()
 
     
 
-![png](images/output_15_2.png)
+![png](images/output_15_2.png?)
     
 
 
@@ -336,7 +336,7 @@ time.sleep(20)  # let metrics catch up
 plot_endpoint_metrics()
 ```
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_19_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_19_1.png?' width="750">
 
     
 
@@ -403,7 +403,7 @@ plt.show()
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_21_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_21_1.png?' width="750">
     
 
 
@@ -449,7 +449,7 @@ time.sleep(60)  # give metrics time to catch up
 plot_endpoint_metrics()
 ```
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_25_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_25_1.png?' width="750">
     
 
 
@@ -497,7 +497,7 @@ plt.show()
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_27_1.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_27_1.png?' width="750">
     
 
 [Back to TOC](#Notebook-overview)
@@ -559,7 +559,7 @@ plot_endpoint_metrics(invocation_start_time)
 
 
     
-![png](images/output_33_2.png)
+![png](images/output_33_2.png?)
     
 
 
@@ -631,7 +631,7 @@ plot_endpoint_metrics(invocation_start_time)
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_38_2.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_38_2.png?' width="750">
     
 
 
@@ -683,7 +683,7 @@ plot_endpoint_metrics(invocation_start_time)
 
 
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_41_2.png' width="750">
+<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/output_41_2.png?' width="750">
     
 
 
