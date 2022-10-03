@@ -34,11 +34,40 @@ The walkthrough includes the following steps:
 
 ### Configuration
 
-You will need to add the `GetMetricStatistics` action to your `AmazonSageMakerServiceCatalogProductsUseRole`, found under `Roles` in the Access Management submenu in the navigation menu of the IAM user interface, as shown below (click the Edit button and add the action manually, then save):
+You will first need to add the `GetMetricStatistics` action to your associated `AmazonSageMakerServiceCatalogProductsUseRole`:
 
-<img src='https://raw.github.com/flatiron-school/DS-Deloitte-07062022-AB-Testing-ML-Models-on-AWS/main/images/iam-role-screenshot.png' width="750">
+![](images/iam-role-update-screen-1.png?)
+Click `Roles` in the nav pane on the left
+<br>
+<br>
+![](images/iam-role-update-screen-2.png?)
+Click `AmazonSageMakerServiceCatalogProductsUseRole`
+<br>
+<br>
+![](images/iam-role-update-screen-3.png?)
+Click on the associated policy name, as shown
+<br>
+<br>
+![](images/iam-role-update-screen-3a.png?)
+Click the `+` icon to the left of the policy name, then click the `Edit` button
+<br>
+<br>
+![](images/iam-role-update-screen-4.png?)
+Click the `JSON` tab
+<br>
+<br>
+![](images/iam-role-update-screen-5.png?)
+Locate the `cloudwatch` actions, and add a comma after the one shown
+<br>
+<br>
+![](images/iam-role-update-screen-6.png?)
+On the next line, add `cloudwatch:GetMetricStatistics`, then scroll down to the bottom of the page and click the `Review policy` button
+<br>
+<br>
+![](images/iam-role-update-screen-7.png?)
+Finally, scroll down to the bottom of the page and click the `Save Changes` button
 
-Having completed that step, you can now set up the required imports and basic initial variables:
+Awesome! We can now set up the required imports and basic initial variables:
 
 
 ```python
